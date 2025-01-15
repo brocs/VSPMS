@@ -204,7 +204,7 @@ export default {
 
         if (user) {
           localStorage.setItem("user", JSON.stringify(user));
-          this.$router.push({ name: 'DashboardVS' });  // Using named route (recommended)
+          this.$router.push({ name: 'Dashboard' });  // Using named route (recommended)
         } else {
           this.errorMessage = "Invalid Employee ID or Password.";
         }
@@ -218,7 +218,7 @@ export default {
 
     onMounted(() => {
       if (localStorage.getItem('user')) {
-        router.push({ name: 'DashboardVS' });  // Redirect to Dashboard if user is logged in
+        router.push({ name: 'Dashboard' });  // Redirect to Dashboard if user is logged in
       }
     });
   }

@@ -1,33 +1,35 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import LoginAc from '@/components/LoginAc.vue';
-import DashboardVS from '@/components/DashboardVS.vue';
+import Login from '@/components/Login.vue';
+import Dashboard from '@/components/Dashboard.vue';
 
 const routes = [
   {
-    path: '/login', // Login path
-    name: 'LoginAc',
-    component: LoginAc,
+    path: '/',
+    name: 'Login',
+    component: Login, // Root path renders the Login component
   },
   {
-    path: '/DashboardVS', // Dashboard path
-    name: 'DashboardVS',
-    component: DashboardVS,
-    // Guard to check if the user is logged in
+    path: '/Login',
+    redirect: '/', // Redirect /Login to /
+  },
+  {
+    path: '/Dashboard',
+    name: 'Dashboard',
+    component: Dashboard,
     beforeEnter: (to, from, next) => {
       const loggedInUser = localStorage.getItem('user');
       if (!loggedInUser) {
-        next('/loginac'); // If not logged in, redirect to login
+        next('/'); // Redirect to root if not logged in
       } else {
-        next(); // Proceed to Dashboard if logged in
+        next(); // Proceed to Dashboard
       }
     }
   },
-  // other routes...
 ];
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
 });
 
 export default router;

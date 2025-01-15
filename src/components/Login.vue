@@ -76,8 +76,8 @@ const handleLogin = () => {
     if (user) {
       // Save user data to localStorage
       localStorage.setItem('user', JSON.stringify(user));
-      console.log('Login successful, redirecting to DashboardVS...');
-      router.push('/DashboardVS'); // Redirect to Dashboard
+      console.log('Login successful, redirecting to Dashboard...');
+      router.push('/Dashboard'); // Redirect to Dashboard
     } else {
       errorMessage.value = 'Invalid Employee ID or Password.';
     }
@@ -90,8 +90,8 @@ const handleLogin = () => {
 onMounted(() => {
   const loggedInUser = localStorage.getItem('user');
   if (loggedInUser) {
-    console.log('User is already logged in, redirecting to DashboardVS...');
-    router.push('/DashboardVS'); // Redirect to Dashboard if logged in
+    console.log('User is already logged in, redirecting to Dashboard...');
+    router.push('/Dashboard'); // Redirect to Dashboard if logged in
   }
 });
 </script>

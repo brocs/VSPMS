@@ -609,9 +609,47 @@ export default {
         incidentInvolve: '',
         incidentDescription: ''
       },
-      // Other data objects...
+      witnessData: { // Initialize witnessData here
+        witnessId: '', // Set an initial value or null if you expect it to be dynamically assigned
+        witnessName: '',
+        witnessStatement: ''
+      },
+      ppeData: {
+        ppeType: '',
+        ppeCondition: '',
+        ppeUsed: false
+      },
+      causeData: {
+        causeDescription: '',
+        causeCategory: '',
+        causeSeverity: ''
+      },
+      firstAidData: {
+        firstAidGiven: false,
+        firstAidDetails: '',
+        firstAidTime: ''
+      },
+      victimData: {
+        victimId: '',
+        victimName: '',
+        victimAge: '',
+        victimGender: '',
+        victimInjuryDescription: ''
+      },
+      victimHistoryData: {
+        previousInjuries: '',
+        medicalHistory: '',
+        ongoingConditions: ''
+      },
+      rescuerData: {
+        rescuerId: '',
+        rescuerName: '',
+        rescuerContact: '',
+        rescuerActions: ''
+      }
     };
   },
+
   mounted() {
     this.setLoggedInUser(); // Call this method to set the logged-in user when the component is mounted
     const modalElement = document.getElementById(this.adhocTaskModalId);

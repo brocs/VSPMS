@@ -47,7 +47,7 @@ export default {
       console.log("User signed out");
       // Remove user data from localStorage and navigate to login page
       localStorage.removeItem('user');
-      this.$router.push({ name: 'LoginAc' });  // Redirect to login page
+      this.$router.push({ name: 'Login' });  // Redirect to login page
     },
   },
   mounted() {
