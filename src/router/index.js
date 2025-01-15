@@ -4,7 +4,7 @@ import DashboardVS from '@/components/DashboardVS.vue';
 
 const routes = [
   {
-    path: '/LoginAc', // Login path
+    path: '/login', // Login path
     name: 'LoginAc',
     component: LoginAc,
   },

@@ -1,9 +1,8 @@
 {
-  "name": "VSPMS",
+  "name": "vspms",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://brocs.github.io/VSPMS",
-
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
